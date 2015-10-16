@@ -3,30 +3,45 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <script src="js/angular.js"></script>
+    <script src="js/angular.min.js"></script>
     <title>AngularMzApp</title>
 </head>
 
 <body ng-app="AngularMzApp">
 
-    <div class="main" ng-controller="MainController">
+    <div id="mainGrid" ng-controller="GridController" ng-init="init()">
+        <h2>Products</h2>
+        <div id="jMainGrid">
+            <div ng-repeat="item in items" class="brick {{ item.class }}" style="background-color: {{ item.bgColor }}">
+                <img ng-src="{{ item.img }}" width="100%">
+                <div class="info">
+                    <h3>{{ item.name|uppercase }}</h3>
+                    <span class="description">{{ item.text }}</span>
+                    <span class="price">{{ item.price|currency }}</span>
+                </div>
+            </div>
+        </div>
+    </div> <!-- /#mainGrid -->
 
-    </div> <!-- /.main -->
+    <div id="main" class="main" ng-controller="MainController"></div> <!-- /.main -->
 
-    <div>
-        <label>Name:</label>
-        <input type="text" ng-model="yourName" placeholder="Enter a name here">
-        <hr>
-        <h1>Hello {{yourName}}!</h1>
-    </div>
-
+    <!-- JS - External -->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/freewall.min.js"></script>
     <!-- JS - Modules -->
     <script src="js/app.js"></script>
     <!-- JS - Controllers -->
     <script src="js/controllers/MainController.js"></script>
+    <script src="js/controllers/GridController.js"></script>
     <!-- JS - Services -->
     <!-- JS - Directives -->
     <script src="js/directives/appInfo.js"></script>
+
+    <!-- <script>
+        $(function() {
+            
+        });
+    </script>  -->
 
 </body>
 </html>
