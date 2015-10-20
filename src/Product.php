@@ -5,7 +5,7 @@
  */
 class Product {
 
-    const MAX_CSS_WIDTH_CLASS = 4;
+    const MAX_CSS_WIDTH_CLASS = 1; // 1..4
 
     protected static $colors = array('#8E44AD', '#F39C12', '#D35400', '#006A3F', '#2980B9', '#C0392B', '#956DC9', '#27AE60');
     protected static $imgs = array('img/product1.jpg', 'img/product2.jpg', 'img/product3.jpg', 'img/product4.jpg', 'img/product5.jpg');

@@ -1,0 +1,9 @@
+@import "grid";
+
+html, body { height: 100%; width: 100%; margin: 0; padding: 0; }
+
+.no-display { display: none; }
+.pull-right { float: right; }
+.pull-left { float: left; }
+.content{ padding: 10px 20px; }
+.error { padding: 10px 20px; background-color: #F2DEDE; color: #A94442; }
